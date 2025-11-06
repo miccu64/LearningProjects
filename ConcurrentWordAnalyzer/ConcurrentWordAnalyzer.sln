@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentWordAnalyzer", "ConcurrentWordAnalyzer.csproj", "{8CA6F8BC-DB62-4DA9-ABA7-7DDCD19167E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentWordAnalyzer", "ConcurrentWordAnalyzer\ConcurrentWordAnalyzer.csproj", "{8CA6F8BC-DB62-4DA9-ABA7-7DDCD19167E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentWordAnalyzerTests", "ConcurrentWordAnalyzerTests\ConcurrentWordAnalyzerTests.csproj", "{0115F42A-7A78-425D-B0D5-D3FA576CDBED}"
 EndProject

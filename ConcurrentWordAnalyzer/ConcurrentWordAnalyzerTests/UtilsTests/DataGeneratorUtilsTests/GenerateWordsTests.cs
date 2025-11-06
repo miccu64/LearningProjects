@@ -1,6 +1,6 @@
 ﻿using ConcurrentWordAnalyzer.Utils;
 
-namespace ConcurrentWordAnalyzerTests;
+namespace ConcurrentWordAnalyzerTests.UtilsTests.DataGeneratorUtilsTests;
 
 public class GenerateWordsTests
 {
@@ -41,5 +41,26 @@ public class GenerateWordsTests
 
         // Assert
         Assert.Equal(count, words.Count);
+    }
+
+    [Fact]
+    public void ShouldWorkConcurrently()
+    {
+        // Arrange
+        const int count = 1000;
+        const int range = 10;
+
+        // Act
+        List<string> words = Enumerable.Range(0, range)
+            .AsParallel()
+            .SelectMany(_ => DataGeneratorUtils.GenerateWords(count))
+            .ToList();
+        
+        // Assert
+        bool allHaveSomeChars = words.All(word => word.Length > 0);
+        Assert.True(allHaveSomeChars);
+
+        bool haveSomeDistinctValues = words.Distinct().Count() > range;
+        Assert.True(haveSomeDistinctValues);
     }
 }

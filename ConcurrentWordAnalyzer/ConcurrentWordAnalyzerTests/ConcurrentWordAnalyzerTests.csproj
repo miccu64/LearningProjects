@@ -20,6 +20,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ConcurrentWordAnalyzer.csproj" />
+      <ProjectReference Include="..\ConcurrentWordAnalyzer\ConcurrentWordAnalyzer.csproj" />
     </ItemGroup>
 
 </Project>
