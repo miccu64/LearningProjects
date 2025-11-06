@@ -4,9 +4,12 @@ public class DataGeneratorUtils
 {
     public static IEnumerable<string> GenerateWords(int count)
     {
-        yield return RandomString();
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(count);
+
+        for (int i = 0; i < count; i++)
+            yield return RandomString();
     }
-    
+
     private static string RandomString()
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
