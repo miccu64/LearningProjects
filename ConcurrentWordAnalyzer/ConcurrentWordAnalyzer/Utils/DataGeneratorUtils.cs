@@ -1,6 +1,6 @@
 namespace ConcurrentWordAnalyzer.Utils;
 
-public class DataGeneratorUtils
+public static class DataGeneratorUtils
 {
     public static IEnumerable<string> GenerateWords(int count)
     {

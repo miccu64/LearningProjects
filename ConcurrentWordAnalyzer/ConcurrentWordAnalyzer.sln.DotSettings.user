@@ -1,4 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=77aa2e28_002D484c_002D42e0_002D8746_002D1d6922e5a74f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;ConcurrentWordAnalyzerTests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\konrad.micek\RiderProjects\LearningProjects\ConcurrentWordAnalyzer\ConcurrentWordAnalyzerTests" Presentation="&amp;lt;ConcurrentWordAnalyzerTests&amp;gt;" /&gt;&#xD;
+  &lt;Project Location="D:\Programowanie\LearningProjects\ConcurrentWordAnalyzer\ConcurrentWordAnalyzerTests" Presentation="&amp;lt;ConcurrentWordAnalyzerTests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
