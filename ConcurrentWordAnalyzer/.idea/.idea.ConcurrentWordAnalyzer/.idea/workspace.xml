@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adc82afb-855f-41fe-8cf2-d4ce4308c7e3" name="Changes" comment="Cleanup">
-      <change afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" afterDir="false" />
+    <list default="true" id="adc82afb-855f-41fe-8cf2-d4ce4308c7e3" name="Changes" comment="SingleThreadWordsProcessor">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConcurrentWordAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConcurrentWordAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Utils/DataGeneratorUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Utils/DataGeneratorUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +29,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/Models/WordStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -98,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1762460859322</updated>
       <workItem from="1762460860440" duration="131000" />
-      <workItem from="1762588610070" duration="2582000" />
+      <workItem from="1762588610070" duration="4811000" />
     </task>
     <task id="LOCAL-00001" summary="Cleanup">
       <option name="closed" value="true" />
@@ -108,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762460978119</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SingleThreadWordsProcessor">
+      <option name="closed" value="true" />
+      <created>1762591462025</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762591462025</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +124,7 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="SingleThreadWordsProcessor" />
+    <option name="LAST_COMMIT_MESSAGE" value="SingleThreadWordsProcessor" />
   </component>
 </project>
