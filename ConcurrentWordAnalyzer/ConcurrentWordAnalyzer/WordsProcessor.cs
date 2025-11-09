@@ -5,82 +5,67 @@ namespace ConcurrentWordAnalyzer;
 
 public static class WordsProcessor
 {
-    public static void SingleThread(IList<string> words)
+    public static string SingleThread(IList<string> words)
     {
         ResultBuilder resultBuilder = new();
 
-        SingleThreadWordsProcessor processor = new();
-        processor.Process(words);
+        SingleThreadWordsProcessor processor = new SingleThreadWordsProcessor()
+            .Process(words);
 
         resultBuilder.AppendResults(processor);
+
         resultBuilder.PrintResults();
+        return resultBuilder.ToString();
     }
 
-    public static void ParallelForEach(IList<string> words)
+    public static string ParallelForEach(IList<string> words)
     {
         ResultBuilder resultBuilder = new();
 
         Parallel.ForEach(
             Partitioner.Create(0, words.Count),
             () => new SingleThreadWordsProcessor(),
-            (range, _, processor) =>
-            {
-                List<string> wordsFromRange = words
-                    .Skip(range.Item1)
-                    .Take(range.Item2 - range.Item1)
-                    .ToList();
-
-                processor.Process(wordsFromRange);
-                return processor;
-            },
+            (range, _, processor) => processor.Process(words, range.Item1, range.Item2),
             processor => { resultBuilder.AppendResults(processor); }
         );
 
         resultBuilder.PrintResults();
+        return resultBuilder.ToString();
     }
 
-    public static void ParallelFor(IList<string> words)
+    public static string ParallelFor(IList<string> words)
     {
-        int count = words.Count;
-
         ResultBuilder resultBuilder = new();
 
         Parallel.For(
             0,
-            count,
+            words.Count,
             () => new SingleThreadWordsProcessor(),
-            (i, _, processor) =>
-            {
-                processor.Process(words[i]);
-                return processor;
-            },
+            (i, _, processor) => processor.Process(words[i]),
             processor => { resultBuilder.AppendResults(processor); }
         );
 
         resultBuilder.PrintResults();
+        return resultBuilder.ToString();
     }
 
-    public static void PLinq(IList<string> words)
+    public static string PLinq(IList<string> words)
     {
         ResultBuilder resultBuilder = new();
 
-        words.AsParallel()
+        OrderablePartitioner<Tuple<int, int>> rangePartitioner = Partitioner.Create(0, words.Count);
+
+        rangePartitioner.AsParallel()
             .WithExecutionMode(ParallelExecutionMode.ForceParallelism)
-            .Aggregate(
-                () => new SingleThreadWordsProcessor(),
-                (processor, word) =>
-                {
-                    processor.Process(word);
-                    return processor;
-                },
-                (processor, func) =>
-                {
-                    resultBuilder.AppendResults(processor);
-                    return func;
-                },
-                processor => processor
-            );
+            .ForAll(range =>
+            {
+                SingleThreadWordsProcessor processor = new SingleThreadWordsProcessor()
+                    .Process(words, range.Item1, range.Item2);
+
+                resultBuilder.AppendResults(processor);
+            });
 
         resultBuilder.PrintResults();
+        return resultBuilder.ToString();
     }
 }

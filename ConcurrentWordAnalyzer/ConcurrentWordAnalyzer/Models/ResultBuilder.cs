@@ -25,12 +25,12 @@ public class ResultBuilder
             );
         }
 
-        foreach (KeyValuePair<int, int> wordCounter in processor.WordLengthCounters)
+        foreach (KeyValuePair<int, int> wordLengthCounter in processor.WordLengthCounters)
         {
             _wordLengthCounters.AddOrUpdate(
-                wordCounter.Key,
-                wordCounter.Value,
-                (_, value) => value + wordCounter.Value
+                wordLengthCounter.Key,
+                wordLengthCounter.Value,
+                (_, value) => value + wordLengthCounter.Value
             );
         }
 
@@ -48,27 +48,38 @@ public class ResultBuilder
     {
         _stopwatch.Stop();
 
+        string result = new StringBuilder()
+            .AppendLine($"Elapsed time: {_stopwatch.ElapsedMilliseconds} ms")
+            .AppendLine(ToString())
+            .ToString();
+
+        Console.WriteLine(result);
+    }
+
+    public override string ToString()
+    {
+        _stopwatch.Stop();
+
         List<string> mostFrequentWords = _wordCounters
             .OrderByDescending(kvp => kvp.Value)
+            .ThenBy(kvp => kvp.Key)
             .Take(5)
             .Select(kvp => kvp.Key)
             .ToList();
 
         List<string> mostFrequentWordLengths = _wordLengthCounters
             .OrderByDescending(kvp => kvp.Value)
+            .ThenBy(kvp => kvp.Key)
             .Take(5)
             .Select(kvp => $"length {kvp.Key} (count {kvp.Value})")
             .ToList();
 
-        StringBuilder sb = new StringBuilder()
-            .AppendLine()
-            .AppendLine($"Elapsed time: {_stopwatch.ElapsedMilliseconds} ms")
+        return new StringBuilder()
             .AppendLine($"Shortest word length: {_shortestWordLength}")
             .AppendLine($"Longest word length: {_longestWordLength}")
             .AppendLine($"Most frequent words: {string.Join(", ", mostFrequentWords)}")
             .AppendLine($"Most frequent word lengths: {string.Join(", ", mostFrequentWordLengths)}")
-            .AppendLine();
-
-        Console.WriteLine(sb.ToString());
+            .AppendLine()
+            .ToString();
     }
 }

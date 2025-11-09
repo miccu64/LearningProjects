@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adc82afb-855f-41fe-8cf2-d4ce4308c7e3" name="Changes" comment="ParallelFor partial impl">
-      <change afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Models/ResultBuilder.cs" afterDir="false" />
+    <list default="true" id="adc82afb-855f-41fe-8cf2-d4ce4308c7e3" name="Changes" comment="Concurrent result building, different parallel executors">
+      <change afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/UtilsTests/WordsProcessorTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConcurrentWordAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConcurrentWordAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Models/ResultBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Models/ResultBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Utils/DataGeneratorUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Utils/DataGeneratorUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,9 +33,16 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bfff78ecaa39c818519fc918bb2d4bbdca6ad93d7170f5cf325f67ccd0b97d43/BooleanAsserts.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/Models/ResultBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/Utils/DataGeneratorUtils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/WordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzerTests/UtilsTests/WordsProcessorTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -52,8 +59,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Project.ConcurrentWordAnalyzer.executor": "Run",
+    "77aa2e28-484c-42e0-8746-1d6922e5a74f.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.5977654",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
@@ -102,7 +111,7 @@
       <updated>1762460859322</updated>
       <workItem from="1762460860440" duration="131000" />
       <workItem from="1762588610070" duration="5447000" />
-      <workItem from="1762690900649" duration="4812000" />
+      <workItem from="1762690900649" duration="8781000" />
     </task>
     <task id="LOCAL-00001" summary="Cleanup">
       <option name="closed" value="true" />
@@ -128,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762593479697</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Concurrent result building, different parallel executors">
+      <option name="closed" value="true" />
+      <created>1762695955934</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762695955934</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,25 +157,7 @@
     <MESSAGE value="Cleanup" />
     <MESSAGE value="SingleThreadWordsProcessor" />
     <MESSAGE value="ParallelFor partial impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="ParallelFor partial impl" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs</url>
-          <line>38</line>
-          <properties documentPath="D:\Programowanie\LearningProjects\ConcurrentWordAnalyzer\ConcurrentWordAnalyzer\WordsProcessor.cs" containingFunctionPresentation="Method 'ParallelFor'">
-            <startOffsets>
-              <option value="1092" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1121" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Concurrent result building, different parallel executors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Concurrent result building, different parallel executors" />
   </component>
 </project>

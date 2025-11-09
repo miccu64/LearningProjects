@@ -7,16 +7,28 @@ public class SingleThreadWordsProcessor
     public int ShortestWordLength { get; private set; } = int.MaxValue;
     public int LongestWordLength { get; private set; }
 
-    public void Process(IEnumerable<string> words)
+    public SingleThreadWordsProcessor Process(IEnumerable<string> words)
     {
         foreach (string word in words)
             Process(word);
+
+        return this;
     }
 
-    public void Process(string word)
+    public SingleThreadWordsProcessor Process(IList<string> words, int start, int end)
+    {
+        for (int i = start; i < end; i++)
+            Process(words[i]);
+
+        return this;
+    }
+
+    public SingleThreadWordsProcessor Process(string word)
     {
         CountWord(word);
         ProcessLength(word);
+
+        return this;
     }
 
     private void CountWord(string word)
