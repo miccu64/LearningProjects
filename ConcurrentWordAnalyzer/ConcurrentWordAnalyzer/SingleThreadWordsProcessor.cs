@@ -10,10 +10,13 @@ public class SingleThreadWordsProcessor
     public void Process(IEnumerable<string> words)
     {
         foreach (string word in words)
-        {
-            CountWord(word);
-            ProcessLength(word);
-        }
+            Process(word);
+    }
+
+    public void Process(string word)
+    {
+        CountWord(word);
+        ProcessLength(word);
     }
 
     private void CountWord(string word)

@@ -1,3 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using ConcurrentWordAnalyzer;
+using ConcurrentWordAnalyzer.Utils;
 
-Console.WriteLine("Hello, World!");
+const int wordsCount = 1_000_000;
+List<string> words = DataGeneratorUtils.GenerateWords(wordsCount).ToList();
+
+WordsProcessor.SingleThread(words);
+WordsProcessor.ParallelFor(words);
+WordsProcessor.ParallelForEach(words);
+WordsProcessor.PLinq(words);

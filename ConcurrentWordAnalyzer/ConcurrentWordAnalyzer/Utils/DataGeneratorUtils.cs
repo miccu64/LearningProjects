@@ -13,7 +13,7 @@ public static class DataGeneratorUtils
     private static string RandomString()
     {
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        int length = Random.Shared.Next(1, 60);
+        int length = Random.Shared.Next(10, 60);
 
         return new string(
             Enumerable.Repeat(chars, length)
