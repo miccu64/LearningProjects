@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adc82afb-855f-41fe-8cf2-d4ce4308c7e3" name="Changes" comment="Concurrent result building, different parallel executors">
-      <change afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/UtilsTests/WordsProcessorTests.cs" afterDir="false" />
+    <list default="true" id="adc82afb-855f-41fe-8cf2-d4ce4308c7e3" name="Changes" comment="Result sorting bugfix, refactor, results comparison, readme">
+      <change afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/SingleThreadWordsProcessorTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConcurrentWordAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConcurrentWordAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Models/ResultBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Models/ResultBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/UtilsTests/WordsProcessorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/WordsProcessorTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +33,18 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bfff78ecaa39c818519fc918bb2d4bbdca6ad93d7170f5cf325f67ccd0b97d43/BooleanAsserts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/Models/ResultBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/Models/ResultBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/Utils/DataGeneratorUtils.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/WordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzerTests/UtilsTests/WordsProcessorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/WordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzerTests/SingleThreadWordsProcessorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzerTests/WordsProcessorTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -111,7 +113,7 @@
       <updated>1762460859322</updated>
       <workItem from="1762460860440" duration="131000" />
       <workItem from="1762588610070" duration="5447000" />
-      <workItem from="1762690900649" duration="8781000" />
+      <workItem from="1762690900649" duration="9586000" />
     </task>
     <task id="LOCAL-00001" summary="Cleanup">
       <option name="closed" value="true" />
@@ -145,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762695955934</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Result sorting bugfix, refactor, results comparison, readme">
+      <option name="closed" value="true" />
+      <created>1762700616737</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762700616737</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +168,7 @@
     <MESSAGE value="SingleThreadWordsProcessor" />
     <MESSAGE value="ParallelFor partial impl" />
     <MESSAGE value="Concurrent result building, different parallel executors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Concurrent result building, different parallel executors" />
+    <MESSAGE value="Result sorting bugfix, refactor, results comparison, readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Result sorting bugfix, refactor, results comparison, readme" />
   </component>
 </project>

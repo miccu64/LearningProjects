@@ -1,7 +1,7 @@
 using ConcurrentWordAnalyzer;
 using ConcurrentWordAnalyzer.Utils;
 
-namespace ConcurrentWordAnalyzerTests.UtilsTests;
+namespace ConcurrentWordAnalyzerTests;
 
 public class WordsProcessorTests
 {
