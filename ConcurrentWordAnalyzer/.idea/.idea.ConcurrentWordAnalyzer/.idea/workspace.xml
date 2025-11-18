@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adc82afb-855f-41fe-8cf2-d4ce4308c7e3" name="Changes" comment="Result sorting bugfix, refactor, results comparison, readme">
-      <change afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/SingleThreadWordsProcessorTests.cs" afterDir="false" />
+    <list default="true" id="adc82afb-855f-41fe-8cf2-d4ce4308c7e3" name="Changes" comment="SingleThreadWordsProcessorTests, refactor">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ConcurrentWordAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConcurrentWordAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/UtilsTests/WordsProcessorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/WordsProcessorTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzer/WordsProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/WordsProcessorTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConcurrentWordAnalyzerTests/WordsProcessorTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,7 @@
     <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/SingleThreadWordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/Utils/DataGeneratorUtils.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/WordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Programowanie/LearningProjects/ConcurrentWordAnalyzer/ConcurrentWordAnalyzer/WordsProcessor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -58,27 +59,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.ConcurrentWordAnalyzer.executor": "Run",
-    "77aa2e28-484c-42e0-8746-1d6922e5a74f.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "XThreadsFramesViewSplitterKey": "0.5977654",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.ConcurrentWordAnalyzer.executor&quot;: &quot;Run&quot;,
+    &quot;77aa2e28-484c-42e0-8746-1d6922e5a74f.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.5977654&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.ConcurrentWordAnalyzer">
     <configuration name="ConcurrentWordAnalyzer" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -113,7 +114,8 @@
       <updated>1762460859322</updated>
       <workItem from="1762460860440" duration="131000" />
       <workItem from="1762588610070" duration="5447000" />
-      <workItem from="1762690900649" duration="9586000" />
+      <workItem from="1762690900649" duration="9627000" />
+      <workItem from="1763490010535" duration="4058000" />
     </task>
     <task id="LOCAL-00001" summary="Cleanup">
       <option name="closed" value="true" />
@@ -155,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762700616737</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="SingleThreadWordsProcessorTests, refactor">
+      <option name="closed" value="true" />
+      <created>1762701181457</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1762701181457</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +179,7 @@
     <MESSAGE value="ParallelFor partial impl" />
     <MESSAGE value="Concurrent result building, different parallel executors" />
     <MESSAGE value="Result sorting bugfix, refactor, results comparison, readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Result sorting bugfix, refactor, results comparison, readme" />
+    <MESSAGE value="SingleThreadWordsProcessorTests, refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="SingleThreadWordsProcessorTests, refactor" />
   </component>
 </project>

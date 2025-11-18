@@ -8,3 +8,4 @@ WordsProcessor.SingleThread(words);
 WordsProcessor.ParallelFor(words);
 WordsProcessor.ParallelForEach(words);
 WordsProcessor.PLinq(words);
+WordsProcessor.ManualTasks(words, 16);

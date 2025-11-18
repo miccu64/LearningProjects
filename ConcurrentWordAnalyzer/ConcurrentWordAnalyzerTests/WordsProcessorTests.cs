@@ -17,10 +17,12 @@ public class WordsProcessorTests
         string result2 = WordsProcessor.ParallelFor(words);
         string result3 = WordsProcessor.ParallelForEach(words);
         string result4 = WordsProcessor.PLinq(words);
+        string result5 = WordsProcessor.ManualTasks(words, 2);
 
         // Assert
-        Assert.Equal(result1, result2);
-        Assert.Equal(result1, result3);
-        Assert.Equal(result1, result4);
+        List<string> results = [result2, result3, result4, result5];
+
+        foreach (string r in results)
+            Assert.Equal(result1, r);
     }
 }

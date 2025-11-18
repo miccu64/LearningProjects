@@ -68,4 +68,47 @@ public static class WordsProcessor
         resultBuilder.PrintResults();
         return resultBuilder.ToString();
     }
+
+    public static string ManualTasks(IList<string> words, int tasksCount)
+    {
+        if (tasksCount <= 0)
+            throw new ArgumentException("Tasks count must be greater than 0.");
+        if (words.Count < tasksCount)
+            throw new ArgumentException($"The number of tasks must be at least {words.Count} tasks.");
+
+        ResultBuilder resultBuilder = new();
+        List<Task> tasks = [];
+        
+        int chunkSize = words.Count / tasksCount;
+        int remainder = words.Count % tasksCount;
+
+        int start = 0;
+
+        for (int i = 0; i < tasksCount; i++)
+        {
+            int localStart = start;
+            int localCount = chunkSize + (i < remainder ? 1 : 0);
+
+            start += localCount;
+            
+            Task task = Task.Run(() =>
+            {
+                IEnumerable<string> localWords = words
+                    .Skip(localStart)
+                    .Take(localCount);
+                
+                SingleThreadWordsProcessor processor = new SingleThreadWordsProcessor()
+                    .Process(localWords.ToList());
+
+                resultBuilder.AppendResults(processor);
+            });
+
+            tasks.Add(task);
+        }
+
+        Task.WaitAll(tasks);
+
+        resultBuilder.PrintResults();
+        return resultBuilder.ToString();
+    }
 }
